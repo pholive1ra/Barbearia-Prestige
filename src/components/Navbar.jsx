@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/navbar/logo.png";
 
 function Navbar() {
   const [openMenu, setopenMenu] = useState(false);
@@ -8,15 +8,6 @@ function Navbar() {
     <>
       <nav className="bg-[#000000] text-white p-4 px-12 h-20 flex justify-between items-center fixed top-0 left-0 w-full z-50">
         <img src={Logo} alt="Logo" className="h-20" />
-
-        <button /*Botão mobile menu*/
-          className="md:hidden text-2xl hover:scale-105 hover:text-blue-300 cursor-pointer"
-          onClick={() =>
-            setopenMenu(!openMenu)
-          } /*!openMenu significa diferente de openMenu (false), alterna ao clicar*/
-        >
-          {openMenu ? "X" : "☰"}
-        </button>
 
         <div className="hidden md:flex gap-6" /*Menu desktop*/>
           <a
@@ -44,9 +35,20 @@ function Navbar() {
             Contato
           </a>
         </div>
-        <button className="bg-[#e53945] hover:bg-[#c59122] cursor-pointer px-4 py-1 rounded hidden md:flex">
+        <button className="bg-[#e53945] cursor-pointer px-4 py-1 rounded hidden md:flex">
           Agendamento
         </button>
+
+        <button /*Botão menu mobile*/
+          className="md:hidden text-2xl hover:scale-105 hover:text-[#e53945] cursor-pointer"
+          onClick={() =>
+            setopenMenu(!openMenu)
+          } /*!openMenu significa diferente de openMenu (false), alterna ao clicar*/
+        >
+          {openMenu ? "X" : "☰"}
+        </button>
+
+        {/*Menu mobile*/}
 
         {openMenu && (
           <div className="md:hidden absolute top-full left-0 w-full bg-[#000000] p-4 flex flex-col items-center gap-4">
