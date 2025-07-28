@@ -1,6 +1,6 @@
-import slide01 from "../assets/slide01.jpg";
-import slide02 from "../assets/slide02.jpg";
-import slide03 from "../assets/slide03.jpg";
+import slide01 from "../assets/img/HeroSlide/slide01.jpg";
+import slide02 from "../assets/img/HeroSlide/slide02.jpg";
+import slide03 from "../assets/img/HeroSlide/slide03.jpg";
 
 import { useState } from "react";
 
@@ -39,7 +39,6 @@ function HeroSlider() {
   return (
     <>
       <section className="relative w-full h-[80vh] overflow-hidden pt-24">
-
         {/* Slides em camadas */}
         <div className="absolute inset-0 w-full h-full">
           {slides.map((slide, i) => (
@@ -51,7 +50,7 @@ function HeroSlider() {
               style={{ backgroundImage: `url(${slide.image})` }}
             ></div>
           ))}
-          
+
           {/* Overlay escuro por cima das imagens */}
           <div className="absolute inset-0 bg-black/70 z-20"></div>
         </div>
@@ -79,7 +78,6 @@ function HeroSlider() {
             ></button>
           ))}
         </div>
-
       </section>
     </>
   );

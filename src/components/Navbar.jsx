@@ -20,12 +20,14 @@ function Navbar() {
         </button>
 
         <div className="hidden md:flex gap-6" /*Menu desktop*/>
-          <a
-            href="#"
-            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
-          >
-            Início
-          </a>
+          <Link to="/inicio">
+            <a
+              href="#"
+              className="hover:text-[#e53945] transition-colors duration-300 font-bold"
+            >
+              Início
+            </a>
+          </Link>
           <a
             href="#"
             className="hover:text-[#e53945] transition-colors duration-300 font-bold"
@@ -54,12 +56,14 @@ function Navbar() {
 
         {openMenu && (
           <div className="md:hidden absolute top-full left-0 w-full h-screen bg-[#000000] p-4 flex flex-col items-center gap-4">
-            <a
-              href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
-            >
-              Início
-            </a>
+            <Link to="/inicio">
+              <a
+                href="#"
+                className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
+              >
+                Início
+              </a>
+            </Link>
             <a
               href="#"
               className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
@@ -78,9 +82,11 @@ function Navbar() {
             >
               Contato
             </a>
-            <button className="bg-[#e53945] border border-transparent cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
-              Agendamento
-            </button>
+            <Link to="/agendamento">
+              <button className="bg-[#e53945] border border-transparent cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
+                Agendamento
+              </button>
+            </Link>
           </div>
         )}
       </nav>
