@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./App.css";
 import Navbar from "./components/Navbar";
+import HeroSlider from "./components/HeroSlider";
 
 function App() {
   return (
     <>
-      <body className="bg-[#f3e9dd]">
+      <body className="bg-[#000000]">
         <Navbar />
-        <div className="h-0.5 w-full bg-[#e53945] fixed top-20 left-0 z-40"></div>
+        <HeroSlider />
       </body>
     </>
   );

@@ -10,7 +10,7 @@ function Navbar() {
         <img src={Logo} alt="Logo" className="h-20" />
 
         <button /*Botão mobile menu*/
-          className="md:hidden text-2xl hover:scale-105 hover:text-blue-300 cursor-pointer"
+          className="md:hidden text-2xl hover:scale-105 hover:text-[#e53945] cursor-pointer"
           onClick={() =>
             setopenMenu(!openMenu)
           } /*!openMenu significa diferente de openMenu (false), alterna ao clicar*/
@@ -21,30 +21,36 @@ function Navbar() {
         <div className="hidden md:flex gap-6" /*Menu desktop*/>
           <a
             href="#"
-            className="hover:text-[#e53945] transition-colors duration-300"
+            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
             Início
           </a>
           <a
             href="#"
-            className="hover:text-[#e53945] transition-colors duration-300"
+            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
             Serviços
           </a>
           <a
             href="#"
-            className="hover:text-[#e53945] transition-colors duration-300"
+            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
             Sobre
           </a>
           <a
             href="#"
-            className="hover:text-[#e53945] transition-colors duration-300"
+            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
             Contato
           </a>
+          <a
+            href="#"
+            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
+          >
+            Planos
+          </a>
         </div>
-        <button className="bg-[#e53945] hover:bg-[#c59122] cursor-pointer px-4 py-1 rounded hidden md:flex">
+        <button className="bg-[#e53945] hover:border-1 hover:bg-transparent hover:border-[#e53945] cursor-pointer px-4 py-1 rounded font-bold hidden md:flex">
           Agendamento
         </button>
 
@@ -52,29 +58,35 @@ function Navbar() {
           <div className="md:hidden absolute top-full left-0 w-full bg-[#000000] p-4 flex flex-col items-center gap-4">
             <a
               href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors duration-300 py-2"
+              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
               Início
             </a>
             <a
               href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors duration-300 py-2"
+              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
               Serviços
             </a>
             <a
               href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors duration-300 py-2"
+              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
               Sobre
             </a>
             <a
               href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors duration-300 py-2"
+              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
               Contato
             </a>
-            <button className="bg-[#e53945] cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] px-4 py-1 rounded w-fit">
+            <a
+              href="#"
+              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
+            >
+              Planos
+            </a>
+            <button className="bg-[#e53945] cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
               Agendamento
             </button>
           </div>
