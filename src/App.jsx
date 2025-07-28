@@ -1,15 +1,19 @@
-import { useState } from "react";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeroSlider from "./components/HeroSlider";
+import Agendamento from "./pages/Agendamento"; // nova página
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <body className="bg-[#000000]">
+    <div className="bg-black min-h-screen">
+      <Router>
         <Navbar />
-        <HeroSlider />
-      </body>
-    </>
+        <Routes>
+          <Route path="/" element={<HeroSlider />} />
+          <Route path="/agendamento" element={<Agendamento />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

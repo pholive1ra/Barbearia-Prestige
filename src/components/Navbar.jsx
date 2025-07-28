@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../assets/logo.png";
 
@@ -31,11 +32,12 @@ function Navbar() {
           >
             Serviços
           </a>
+
           <a
             href="#"
             className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
-            Sobre
+            Planos
           </a>
           <a
             href="#"
@@ -43,19 +45,15 @@ function Navbar() {
           >
             Contato
           </a>
-          <a
-            href="#"
-            className="hover:text-[#e53945] transition-colors duration-300 font-bold"
-          >
-            Planos
-          </a>
         </div>
-        <button className="bg-[#e53945] hover:border-1 hover:bg-transparent hover:border-[#e53945] cursor-pointer px-4 py-1 rounded font-bold hidden md:flex">
-          Agendamento
-        </button>
+        <Link to="/agendamento">
+          <button className="bg-[#e53945] border border-transparent hover:bg-transparent hover:border-[#e53945] cursor-pointer px-4 py-1 rounded font-bold hidden md:flex transition-all duration-300">
+            Agendamento
+          </button>
+        </Link>
 
         {openMenu && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-[#000000] p-4 flex flex-col items-center gap-4">
+          <div className="md:hidden absolute top-full left-0 w-full h-screen bg-[#000000] p-4 flex flex-col items-center gap-4">
             <a
               href="#"
               className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
@@ -72,7 +70,7 @@ function Navbar() {
               href="#"
               className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
-              Sobre
+              Planos
             </a>
             <a
               href="#"
@@ -80,18 +78,13 @@ function Navbar() {
             >
               Contato
             </a>
-            <a
-              href="#"
-              className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
-            >
-              Planos
-            </a>
-            <button className="bg-[#e53945] cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
+            <button className="bg-[#e53945] border border-transparent cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
               Agendamento
             </button>
           </div>
         )}
       </nav>
+      <div className="h-1 bg-[#e53945] w-full" />
     </>
   );
 }

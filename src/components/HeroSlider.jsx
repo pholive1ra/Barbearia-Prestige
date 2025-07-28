@@ -30,50 +30,56 @@ function HeroSlider() {
 
   const nextSlide = () => {
     setSlideAtual((prev) => (prev + 1) % slides.length);
-    {
-      /*Proximo slide*/
-    }
   };
+
   const prevSlide = () => {
     setSlideAtual((prev) => (prev - 1 + slides.length) % slides.length);
-    {
-      /*Anterior slide*/
-    }
   };
 
   return (
     <>
-      <section className="relative w-full h-[80vh] overflow-hidden">
-        {/* Imagem de fundo */}
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
-          style={{ backgroundImage: `url(${slides[slideAtual].image})` }}
-        >
-          {/* Overlay escuro */}
-          <div className="absolute inset-0 bg-black/70"></div>
+      <section className="relative w-full h-[80vh] overflow-hidden pt-24">
+
+        {/* Slides em camadas */}
+        <div className="absolute inset-0 w-full h-full">
+          {slides.map((slide, i) => (
+            <div
+              key={i}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+                i === slideAtual ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            ></div>
+          ))}
+          
+          {/* Overlay escuro por cima das imagens */}
+          <div className="absolute inset-0 bg-black/70 z-20"></div>
         </div>
+
         {/* Conteúdo do slide */}
-        <div className="relative z-10 flex flex-col items-start justify-center h-full px-8 md:px-20 text-white max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight">
+        <div className="relative z-30 flex flex-col items-start justify-center px-5 md:px-10 text-white max-w-2xl pt-18">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             {slides[slideAtual].title}
           </h2>
           <p className="text-lg mb-6">{slides[slideAtual].description}</p>
-          <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition">
-            Saiba Mais
+          <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
+            Agendar Serviço
           </button>
         </div>
-        {/* Indicadores de slide (bolinhas) */}
-        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+
+        {/* Indicadores de slide */}
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
           {slides.map((_, i) => (
             <button
               key={i}
-              className={`w-6 h-2 rounded-full ${
+              className={`w-6 h-2 rounded-full cursor-pointer ${
                 i === slideAtual ? "bg-red-600" : "bg-white/40"
               } transition`}
               onClick={() => setSlideAtual(i)}
             ></button>
           ))}
         </div>
+
       </section>
     </>
   );
