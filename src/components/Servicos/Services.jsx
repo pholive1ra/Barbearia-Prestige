@@ -10,7 +10,7 @@ function Services() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl md:text-4xl text-white font-semibold tracking-wide">
+      <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
         O que oferecemos?
       </h2>
 

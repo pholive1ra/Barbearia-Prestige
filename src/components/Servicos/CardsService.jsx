@@ -48,7 +48,9 @@ function Card({ title, description, image }) {
         <div className="absolute inset-0 bg-[#e53945] hover:border-transparent bg-opacity-70 opacity-0 hover:border-2 group-hover:opacity-50 transition-opacity duration-300"></div>
 
         <div className="w-full inset-0 h-60 bg-opacity-30 object-cover relative z-10">
-          <h3 className="text-3xl mt-2 font-semibold text-white">{title}</h3>
+          <h3 className="font-serif text-2xl font-bold mt-2 text-white">
+            {title}
+          </h3>
           <p className=" mt-5 text-gray-300 text-sm text-left leading-relaxed">
             {description}
           </p>
