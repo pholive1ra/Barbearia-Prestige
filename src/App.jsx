@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Agendamento from "./pages/Agendamento";
 import Home from "./pages/Home"; // << Adiciona isso
+import BotaoAgendar from "./components/BotaoAgendar";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           {/* Agora usa a Home que tem Hero + Services */}
           <Route path="/agendamento" element={<Agendamento />} />
         </Routes>
+        <BotaoAgendar />
       </Router>
     </div>
   );

@@ -1,8 +1,22 @@
-import "@fontsource/cinzel-decorative";
+import { motion } from "framer-motion";
+import CardsService from "./CardsService";
 
 function Services() {
   return (
-    <h2 className="font-cinzel-700 text-3xl text-white">O Que Oferecemos</h2>
+    <motion.div
+      className="text-center mt-16 px-4"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl md:text-4xl text-white font-semibold tracking-wide">
+        O que oferecemos?
+      </h2>
+
+      <div className="bg-[#e53945] w-32 h-[2px] mx-auto mt-5"></div>
+      <CardsService />
+    </motion.div>
   );
 }
 

@@ -1,9 +1,10 @@
+// tailwind.config.js
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        cinzel: ["'Cinzel Decorative'", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

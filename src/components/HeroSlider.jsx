@@ -1,3 +1,4 @@
+import BotaoAgendar from "./BotaoAgendar";
 import slide01 from "../assets/img/HeroSlide/slide01.jpg";
 import slide02 from "../assets/img/HeroSlide/slide02.jpg";
 import slide03 from "../assets/img/HeroSlide/slide03.jpg";
@@ -61,8 +62,8 @@ function HeroSlider() {
             {slides[slideAtual].title}
           </h2>
           <p className="text-lg mb-6">{slides[slideAtual].description}</p>
-          <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
-            Agendar Serviço
+          <button className="bg-[#e53945] hover:bg-red-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
+            Ver mais
           </button>
         </div>
 

@@ -49,7 +49,7 @@ function Navbar() {
           </a>
         </div>
         <Link to="/agendamento">
-          <button className="bg-[#e53945] border border-transparent hover:bg-transparent hover:border-[#e53945] cursor-pointer px-4 py-1 rounded font-bold hidden md:flex transition-all duration-300">
+          <button className="bg-[#e53945] hover:bg-red-600 cursor-pointer px-4 py-1 rounded font-bold hidden md:flex transition-all duration-300">
             Agendamento
           </button>
         </Link>
@@ -83,7 +83,7 @@ function Navbar() {
               Contato
             </a>
             <Link to="/agendamento">
-              <button className="bg-[#e53945] border border-transparent cursor-pointer hover:border-1 hover:bg-transparent hover:border-[#e53945] font-bold px-4 py-1 rounded w-fit">
+              <button className="bg-[#e53945] hover:bg-red-600 cursor-pointer font-bold px-4 py-1 rounded w-fit">
                 Agendamento
               </button>
             </Link>
