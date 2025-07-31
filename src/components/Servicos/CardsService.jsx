@@ -41,7 +41,7 @@ function Card({ title, description, image }) {
         <img
           src={image}
           alt={title}
-          className="w-full h-45 object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full loading=lazy h-45 object-cover transition-transform duration-300 group-hover:scale-110"
         />
 
         {/* Overlay vermelho */}

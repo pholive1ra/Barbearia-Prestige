@@ -11,7 +11,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/inicio" element={<Home />} />{" "}
+          <Route path="/" element={<Home />} />
+          <Route path="/inicio" element={<Home />} />
           {/* Agora usa a Home que tem Hero + Services */}
           <Route path="/agendamento" element={<Agendamento />} />
         </Routes>
