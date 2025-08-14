@@ -9,11 +9,10 @@ function App() {
   return (
     <div className="bg-black min-h-screen">
       <Router>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inicio" element={<Home />} />
-          {/* Agora usa a Home que tem Hero + Services */}
+          {/* Agora usa a <Home/> que tem Navbar + Hero + Services */}
           <Route path="/agendamento" element={<Agendamento />} />
         </Routes>
         <BotaoAgendar />

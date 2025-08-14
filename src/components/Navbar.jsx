@@ -45,7 +45,7 @@ function Navbar() {
             href="#"
             className="hover:text-[#e53945] transition-colors duration-300 font-bold"
           >
-            Contato
+            Avaliações
           </a>
         </div>
         <Link to="/agendamento">
@@ -80,7 +80,7 @@ function Navbar() {
               href="#"
               className="hover:scale-105 hover:text-[#e53945] transition-colors font-bold duration-300 py-2"
             >
-              Contato
+              Avaliações
             </a>
             <Link to="/agendamento">
               <button className="bg-[#e53945] hover:bg-red-600 cursor-pointer font-bold px-4 py-1 rounded w-fit">

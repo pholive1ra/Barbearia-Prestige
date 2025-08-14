@@ -51,7 +51,7 @@ function Card({ title, description, image }) {
           <h3 className="font-serif text-2xl font-bold mt-2 text-white">
             {title}
           </h3>
-          <p className=" mt-5 text-gray-300 text-sm text-left leading-relaxed">
+          <p className=" mt-5 text-gray-300 text-sm text-left p-2 leading-relaxed">
             {description}
           </p>
         </div>
